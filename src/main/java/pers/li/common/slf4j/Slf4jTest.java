@@ -1,16 +1,26 @@
 package pers.li.common.slf4j;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Arrays;
-
+@RestController
+@RequestMapping("/test")
 @Slf4j
 public class Slf4jTest {
 
-    public static void main(String[] args) {
-        log.info(Arrays.toString(args));
-        log.debug(Arrays.toString(args));
-        log.error(Arrays.toString(args));
+    /**
+     * 测试注解日志,当配置文件application.properties中
+     * logging.level.root=error,则只会打印error的日志
+     * @return
+     */
+    @GetMapping("/q")
+    public String get(){
+        log.info("12");
+        log.debug("12");
+        log.error("12");
+        return "1";
     }
 
 }
