@@ -65,13 +65,5 @@ log日志打印
         </appender>
     logger.error("getBalanceHint() 异常:{}", ExceptionUtils.getFullStackTrace(e));
 
-**3.使用@Slf4j注解打印日志-lombok：pers.li.common.slf4j.Slf4jTest**
     
-    1.引入注解：
-        <!--可以引入日志 @Slf4j注解-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
-    2.idea安装lombok
-    3.打印：
+  
