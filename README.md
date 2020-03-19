@@ -38,7 +38,7 @@ log日志打印
     
 **2.logback:**
     
-    ogback可以使用logstash-logback-encoder来打印json格式日志：
+    logback可以使用logstash-logback-encoder来打印json格式日志：
         <dependency>
             <groupId>net.logstash.logback</groupId>
             <artifactId>logstash-logback-encoder</artifactId>
